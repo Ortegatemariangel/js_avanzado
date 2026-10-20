@@ -232,4 +232,4 @@ Aprender a utilizar el DOM es importante para desarrollar páginas web más inte
 3. MDN Web Docs. *Introducción a la manipulación del DOM.*
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting
 
-
+![Logo del proyecto](dom-espanol.png)
