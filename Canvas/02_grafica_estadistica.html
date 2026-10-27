@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gráfica estadística</title>
+</head>
+<body>
+    <h1>Ventas durante la semana</h1>
+
+    <canvas id="grafica" width="600" height="350"
+            style="border: 2px solid purple;">
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById("grafica");
+        const ctx = canvas.getContext("2d");
+
+        const dias = ["Lun", "Mar", "Mie", "Jue", "Vie"];
+        const ventas = [20, 35, 25, 45, 30];
+
+        for (let i = 0; i < ventas.length; i++) {
+            let x = 60 + i * 100;
+            let altura = ventas[i] * 5;
+            let y = 280 - altura;
+
+            ctx.fillStyle = "purple";
+            ctx.fillRect(x, y, 50, altura);
+
+            ctx.fillStyle = "black";
+            ctx.fillText(ventas[i], x + 15, y - 5);
+            ctx.fillText(dias[i], x + 10, 300);
+        }
+
+        ctx.beginPath();
+        ctx.moveTo(30, 280);
+        ctx.lineTo(560, 280);
+        ctx.stroke();
+    </script>
+</body>
+</html>
